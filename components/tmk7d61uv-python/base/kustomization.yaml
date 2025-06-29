@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: tmk7d61uv-python
+  janus-idp.io/tekton: tmk7d61uv-python
+  backstage.io/kubernetes-id: tmk7d61uv-python
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: tmk7d61uv-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
